@@ -1,15 +1,22 @@
 {
-    "app_name": "reread",
-    "description": "Local/Self-hosted RSS reader",
-    "hidden": "true",
-    "rank": "20",
+    "app_name": "Reread",
+    "description": "Local/Self-hosted RSS reader using RedisJSON + RediSearch + RedisTimeSeries + RedisGraph + RedisBloom",
+    "rank": "120",
     "type": "Full App",
     "contributed_by": "Community",
-    "repo_url": "https://github.com/sangupta/reread",
+    "repo_url": "https://github.com/redis-developer/reread",
     "download_url": "",
     "hosted_url": "",
-    "quick_deploy": "false",
-    "deploy_buttons": [],
+    "quick_deploy": "true",
+    "deploy_buttons": [
+        {
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/reread.git" 
+        },
+        {
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/reread.git" 
+        }
+    ],
+    
     "language": [
         "Java",
         "Javascript",
@@ -55,5 +62,5 @@
     "verticals": [
         "Technology"
     ],
-    "markdown": "https://raw.githubusercontent.com/sangupta/reread/main/README.md",
+    "markdown": "https://raw.githubusercontent.com/sangupta/reread/main/README.md"
 }
