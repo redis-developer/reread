@@ -5,7 +5,7 @@
     "type": "Full App",
     "contributed_by": "Community",
     "repo_url": "https://github.com/redis-developer/reread",
-    "download_url": "",
+    "download_url": "https://github.com/redis-developer/reread/archive/refs/heads/main.zip",
     "hosted_url": "",
     "quick_deploy": "true",
     "deploy_buttons": [
