@@ -48,11 +48,11 @@
         "caching"
     ],
     "redis_modules": [
-        "RediJSON",
+        "RedisJSON",
         "RedisTimeseries",
         "RedisGraph",
         "RediSearch",
-        "RedisBlooom"
+        "RedisBloom"
     ],
     "app_image_urls": [],
     "youtube_url": "https://www.youtube.com/watch?v=6nOSA7ihQcc",
