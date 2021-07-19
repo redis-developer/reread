@@ -7,7 +7,7 @@
     "repo_url": "https://github.com/redis-developer/reread",
     "download_url": "https://github.com/redis-developer/reread/archive/refs/heads/main.zip",
     "hosted_url": "",
-    "quick_deploy": "true",
+    "quick_deploy": "false",
     "deploy_buttons": [
         {
             "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/reread.git" 
