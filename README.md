@@ -503,7 +503,7 @@ $ mvn clean package
 $ cd..
 
 # Start the docker container
-$ docker run -d -p 6379:6379 redislabs/redismd
+$ docker run -d -p 6379:6379 redislabs/redismod
 
 # Start the project
 $ java -jar server/target/reread.jar
