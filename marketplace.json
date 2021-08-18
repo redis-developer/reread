@@ -46,7 +46,7 @@
         "FT.ADD"
     ],
     "redis_features": [
-        "caching"
+        "Caching"
     ],
     "redis_modules": [
         "RedisJSON",
@@ -61,7 +61,7 @@
         "Hackathon"
     ],
     "verticals": [
-        "Technology"
+        "Others"
     ],
     "markdown": "https://raw.githubusercontent.com/redis-developer/reread/main/README.md"
 }
