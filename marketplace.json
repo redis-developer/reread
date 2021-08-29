@@ -1,7 +1,7 @@
 {
     "app_name": "Reread",
     "description": "Local/Self-hosted RSS reader using RedisJSON + RediSearch + RedisTimeSeries + RedisGraph + RedisBloom",
-    "rank": "120",
+    "rank": 105,
     "type": "Full App",
     "contributed_by": "Community",
     "repo_url": "https://github.com/redis-developer/reread",
