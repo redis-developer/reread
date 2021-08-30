@@ -11,7 +11,7 @@ Use the following Docker command to have redis running:
 docker run -p 6379:6379 redislabs/redismod:latest
 ```
 
-The project is a submission entry to [Build on Redis Hackathon](https://hackathons.redislabs.com/hackathons/build-on-redis-hackathon?tab=0). Demo video is available on [Youtube](https://www.youtube.com/watch?v=6nOSA7ihQcc).
+
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ The project is a submission entry to [Build on Redis Hackathon](https://hackatho
   * [Redis Core](#redis-core)
   * [RedisJSON](#redisjson)
   * [RediSearch](#redisearch)
-  * [Redis Timeseries](#redistimeseries)
+  * [RedisTimeseries](#redistimeseries)
   * [Redis Bloom](#redisbloom)
 * [Issues encountered with Redis](#issues-encountered-with-redis)
 * [Redis commands usage](#redis-commands-usage)
@@ -49,7 +49,7 @@ The project is a submission entry to [Build on Redis Hackathon](https://hackatho
   * [Front-end](#front-end)
   * [Back-end](#back-end)
 * [Improvement ideas](#improvement-ideas)
-* [License](#license)
+
 
 ## Motivation
 
@@ -550,6 +550,4 @@ get started.
 * Use HTTPs proxy to serve images
 * Add news sites available in free non-commercial license as [mentioned here](https://jtmuller5-98869.medium.com/replacing-the-google-news-api-with-an-rss-feed-and-jsoup-c351de353479).
 
-## License
 
-Apache License Version 2.0.
