@@ -3,7 +3,7 @@
 ReRead is a desktop based/self-hosted RSS feed reader.
 
 It is a self-contained Java JAR file which only requires a Redis instance
-with Redis Modules. You can download a ready-to-use binary from [Github releases](https://github.com/sangupta/reread/releases/tag/1.0.0).
+with Redis Modules. You can download a ready-to-use binary from [Github releases](https://github.com/redis-developer/reread/releases/tag/1.0.0).
 
 Use the following Docker command to have redis running:
 
@@ -103,35 +103,35 @@ ReRead comes with the following features:
 
 ### Home page
 
-![Home](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/reread-home.png)
+![Home](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/reread-home.png)
 
 ### Folder view
 
-![Folder View](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/folder-view.png)
+![Folder View](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/folder-view.png)
 
 ### Magazine view
 
-![Magazine View](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/maagzine-view.png)
+![Magazine View](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/maagzine-view.png)
 
 ### Search results
 
-![Search Results](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/search-results.png)
+![Search Results](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/search-results.png)
 
 ### Title only view
 
-![Title Only View](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/title-only-view.png)
+![Title Only View](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/title-only-view.png)
 
 ### Feed details
 
-![Feed Details](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/feed-details.png)
+![Feed Details](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/feed-details.png)
 
 ### Post read activity
 
-![Post Read](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/posts-read.png)
+![Post Read](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/posts-read.png)
 
 ### Post bookmarked activity
 
-![Post Bookmarked](https://raw.githubusercontent.com/sangupta/reread/main/screenshots/posts-bookmarked.png)
+![Post Bookmarked](https://raw.githubusercontent.com/redis-developer/reread/main/screenshots/posts-bookmarked.png)
 
 ## Architecture
 
