@@ -1,4 +1,4 @@
-# reread
+# Reread
 
 ReRead is a desktop based/self-hosted RSS feed reader.
 
