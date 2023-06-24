@@ -1,6 +1,6 @@
 {
     "app_name": "Reread",
-    "description": "Local/Self-hosted RSS reader using RedisJSON + RediSearch + RedisTimeSeries + RedisGraph + RedisBloom",
+    "description": "Local/Self-hosted RSS reader using Redis Stack",
     "rank": 105,
     "type": "Full App",
     "contributed_by": "Community",
@@ -11,13 +11,13 @@
     "quick_deploy": "false",
     "deploy_buttons": [
         {
-            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/reread.git" 
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/reread.git"
         },
         {
-            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/reread.git" 
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/reread.git"
         }
     ],
-    
+
     "language": [
         "Java",
         "Javascript",
@@ -45,15 +45,15 @@
         "FT.SEARCH",
         "FT.ADD"
     ],
-    "redis_features": [
+    "redis_use_cases": [
         "Caching"
     ],
-    "redis_modules": [
-        "RedisJSON",
-        "RedisTimeSeries",
-        "RedisGraph",
-        "RediSearch",
-        "RedisBloom"
+    "redis_features": [
+        "JSON",
+        "Time Series",
+        "Graph",
+        "Search and Query",
+        "Probabilistic"
     ],
     "app_image_urls": [],
     "youtube_url": "https://www.youtube.com/watch?v=QUKiXHXgK0Y",
