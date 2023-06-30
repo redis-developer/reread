@@ -22,8 +22,8 @@ docker run -p 6379:6379 redislabs/redismod:latest
   * [Notes on Security](#notes-on-security)
 * [Redis modules used](#redis-modules-used)
   * [Redis Core](#redis-core)
-  * [RedisJSON](#redisjson)
-  * [RediSearch](#redisearch)
+  * [Redis JSON](#redisjson)
+  * [Redis Search](#redisearch)
   * [RedisTimeseries](#redistimeseries)
   * [Redis Bloom](#redisbloom)
 * [Issues encountered with Redis](#issues-encountered-with-redis)
@@ -137,7 +137,7 @@ ReRead comes with the following features:
 
 ReRead is a classic 3-tiered application, where the web tier connects with the service
 tier over REST services. All data persistence happens inside Redis. ReRead includes
-an embedded scheduler that 
+an embedded scheduler that
 
 ```
    +-------+              +--------+                     +------------+
@@ -153,9 +153,9 @@ an embedded scheduler that
 
 ReRead utilizes continual polling for fetching new posts from RSS/Atom feeds. This is
 limited as there is no easy way of receiving webhooks on http://localhost for feeds
-with [PubSubHubBub](https://github.com/pubsubhubbub/) enabled. 
+with [PubSubHubBub](https://github.com/pubsubhubbub/) enabled.
 
-The code can however be extended to use tunneling via [ngrok](https://ngrok.com/), 
+The code can however be extended to use tunneling via [ngrok](https://ngrok.com/),
 [localtunnel](https://github.com/localtunnel) or otherwise to make use of PubSubHubBub
 to reduce polling. **Note**: Not all feeds/sites support hooks and thus polling may
 still be required.
@@ -167,7 +167,7 @@ subscribe of hundreds/thousands of feeds and would like to run it locally or sel
 host.
 
 In case of self-hosting, it is preferable to add IP-based restrictions along with
-BASIC authentication using a front-proxy like [Nginx](https://www.nginx.com/) or 
+BASIC authentication using a front-proxy like [Nginx](https://www.nginx.com/) or
 [Caddy Server](https://caddyserver.com/) that will also enable a [Let's Encrypt](https://letsencrypt.org/)
 based SSL certificate.
 
@@ -177,25 +177,25 @@ The project uses the following Redis modules for its functionality:
 
 ### Redis Core
 
-[Redis Core](https://redis.io) used to check existence of keys and for other minor 
+[Redis Core](https://redis.io) used to check existence of keys and for other minor
 operations based on keys. This is also used to store the posts data due to a bug in the
-RedisJSON Java driver where it looses encoding of the text.
+Redis JSON Java driver where it looses encoding of the text.
 
-### RedisJSON
+### Redis JSON
 
-[RedisJSON](https://redislabs.com/redis-enterprise/redis-json/) - this serves as the document
+[Redis JSON](https://redislabs.com/redis-enterprise/redis-json/) - this serves as the document
 store for us. All post data, details on feeds, when they were crawled etc is stored as JSON documents.
 This allows us fine grained atomic operations such as updating a single field within the document
 than read/writing the entire document again.
 
-### RediSearch
+### Redis Search
 
-[RediSearch](https://redislabs.com/redis-enterprise/redis-search/) - this is used to index
+[Redis Search](https://redislabs.com/redis-enterprise/redis-search/) - this is used to index
 and search across all posts. The full-text search built into the UI is powered by it.
 
-### RedisTimeSeries
+###Redis Time Series
 
-[RedisTimeSeries](https://redislabs.com/modules/redis-timeseries/) - this is used to store the
+[Redis Time Series](https://redislabs.com/modules/redis-timeseries/) - this is used to store the
 activity behavior of user as well as the publishing behavior of the feeds. Dashboards such as number
 of posts read per day, per week etc are powered using this module.
 
@@ -206,7 +206,7 @@ us de-duplicate entries not just in the same feed, but also across the board. Th
 post once, why read it again?
 
 ## Redis commands usage
- 
+
 Following is a list of Redis commands used per feature/workflow. Please refer to section on
 [Notes on Security](#notes-on-security) to read why authentication is not baked in.
 
@@ -267,7 +267,7 @@ JSON.SET me . {feedList}
 ### Adding a feed in a folder
 
 The commands used in this feature are a union of all the commands used
-in [Adding a feed](#adding-a-new-feed) as described above. The extra commands 
+in [Adding a feed](#adding-a-new-feed) as described above. The extra commands
 used here are:
 
 ```
@@ -375,7 +375,7 @@ ZADD timeline:$all {postID} {post.updated}
 ### Marking a post read/unread
 
 I was using `JSON.GET`/`JSON.SET` but due to an encoding bug in `JreJson` driver,
-I had to using simple `GET`/`SET`. Bug has been filed as https://github.com/RedisJSON/JRedisJSON/issues/37
+I had to using simple `GET`/`SET`. Bug has been filed as https://github.com/Redis JSON/JRedis JSON/issues/37
 
 ```
 // marking read
@@ -457,7 +457,7 @@ TS.RANGE timeSeries-activity:{activityID} {rereadStartTime} {currentSystemTime} 
 
 ### Searching for posts
 
-The current Java driver for RedisSearch does not provide an API to query
+The current Java driver for Redis Search does not provide an API to query
 in a specific index which serves as a hindrance. Thus, filtering of posts
 in the given index is done in the JVM. Refer [here](https://github.com/RediSearch/JRediSearch/blob/master/src/main/java/io/redisearch/client/Client.java#L362) and [here](https://github.com/RediSearch/JRediSearch/blob/master/src/main/java/io/redisearch/client/Client.java#L375) to see the current driver
 limitations.
@@ -513,7 +513,7 @@ You can now access the application at http://localhost:1309
 
 ## Hacking
 
-`reread` is 100% hackable from the word **go**. 
+`reread` is 100% hackable from the word **go**.
 
 ### Front-end
 
@@ -528,8 +528,8 @@ $ npm run watch
 ```
 
 This shall start a local development server on http://localhost:1234 where the React
-application is continuously built and deployed. Open your favorite editor like 
-[VSCode](https://code.visualstudio.com/), [Atom](https://atom.io/) or 
+application is continuously built and deployed. Open your favorite editor like
+[VSCode](https://code.visualstudio.com/), [Atom](https://atom.io/) or
 [Sublime Text](https://www.sublimetext.com/) and start making changes.
 
 ### Back-end
@@ -549,5 +549,3 @@ get started.
 * Add settings to customize layouts, themes, fonts etc
 * Use HTTPs proxy to serve images
 * Add news sites available in free non-commercial license as [mentioned here](https://jtmuller5-98869.medium.com/replacing-the-google-news-api-with-an-rss-feed-and-jsoup-c351de353479).
-
-
